@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flag Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Home -->
+  <section id="screen-home" class="screen active" aria-labelledby="home-title">
+    <div class="home-card">
+      <div class="home-flags" aria-hidden="true">🇫🇷 🇯🇵 🇧🇷 🇨🇦 🇰🇪</div>
+      <h1 id="home-title">Flag Game</h1>
+      <p class="tagline">Take turns, answer flag questions, and race to <strong>15 points</strong>!</p>
+      <form id="setup-form" class="players-setup">
+        <label class="player-input p0">
+          <span class="avatar" aria-hidden="true">🦊</span>
+          <span class="label-text">Player 1</span>
+          <input id="name-0" type="text" maxlength="12" autocomplete="off" required>
+        </label>
+        <label class="player-input p1">
+          <span class="avatar" aria-hidden="true">🐼</span>
+          <span class="label-text">Player 2</span>
+          <input id="name-1" type="text" maxlength="12" autocomplete="off" required>
+        </label>
+        <button type="submit" class="btn-primary">Play! ▶</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Game -->
+  <section id="screen-game" class="screen" aria-label="Game">
+    <header class="scoreboard" id="scoreboard"></header>
+
+    <div class="turn-banner" id="turn-banner" role="status" aria-live="polite"></div>
+
+    <main class="question-area">
+      <p class="prompt" id="prompt"></p>
+      <div class="big-flag" id="big-flag" aria-hidden="true"></div>
+      <div class="options" id="options"></div>
+      <div class="feedback" id="feedback" role="status" aria-live="polite"></div>
+      <button class="btn-primary next-btn" id="next-btn" hidden>Next ▶ <kbd>Enter</kbd></button>
+    </main>
+  </section>
+
+  <!-- Winner -->
+  <section id="screen-win" class="screen" aria-labelledby="win-title">
+    <div class="confetti" id="confetti" aria-hidden="true"></div>
+    <div class="win-card">
+      <div class="trophy" aria-hidden="true">🏆</div>
+      <h1 id="win-title"></h1>
+      <p class="win-sub" id="win-sub"></p>
+      <div class="win-buttons">
+        <button class="btn-primary" id="again-btn">Play again ▶</button>
+        <button class="btn-secondary" id="home-btn">Change players</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/data.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
