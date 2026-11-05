@@ -11,7 +11,7 @@ A two-player geography quiz website for Gabi (older) and Oli (younger) covering 
 | Date | Decision | Reason |
 |------|----------|--------|
 | 2026-11-05 | Two difficulty levels: Level 1 (Oli) has 3 picture-led options and read-aloud. Level 2 (Gabi) has 4 options and harder question types. | Lets a younger and an older child compete fairly |
-| 2026-11-05 | Code hosted on GitHub at **FaisalRM3000/family-flag-game**, as a **public** repo published with GitHub Pages | Faisal wants the website live. Free GitHub Pages needs a public repo. |
+| 2026-11-05 | Code hosted on GitHub at **faisalrm5000/family-flag-game** (public). The live site is **https://faisalrm5000.github.io/family-flag-game/**, served by GitHub Pages from the `main` branch root. | Faisal wants the website live. Free GitHub Pages needs a public repo. Switched from the FaisalRM3000 account to faisalrm5000; an empty private repo is still left on FaisalRM3000. |
 | 2026-11-05 | Public repo keeps the children's **names** but **not their ages**. Docs say "older child" and "younger child" instead. | Faisal's choice, for privacy. **Never add their ages to any file in this repo.** |
 | 2026-11-05 | M1 uses **emoji flags** (🇫🇷), not SVG files | They look great on macOS and need no downloads. Switch to local SVGs (flag-icons, MIT) in M3, since emoji flags don't show on Windows. |
 | 2026-11-05 | Plain HTML/CSS/JS with classic `<script>` tags (no framework, no build, no ES modules) | Simplest option, and it also works when opening index.html straight from the folder |
@@ -27,6 +27,7 @@ A two-player geography quiz website for Gabi (older) and Oli (younger) covering 
 
 ## Progress log
 
+- **2026-11-05:** 🚀 **Published.** Code pushed to github.com/faisalrm5000/family-flag-game, and GitHub Pages switched on. Live at https://faisalrm5000.github.io/family-flag-game/
 - **2026-11-05:** Set up git and created the GitHub repo. Removed the children's ages from all files before publishing.
 - **2026-11-05:** ✅ **M1 playable prototype built and tested.**
   - Two players with editable names (saved in the browser) and fixed avatars (🦊 Gabi, 🐼 Oli).
@@ -48,6 +49,10 @@ A two-player geography quiz website for Gabi (older) and Oli (younger) covering 
 - Node.js isn't installed on this Mac, so tests run in the browser (tests/test.html). The test file also runs with Node if it's installed later.
 - macOS blocks some tools from starting in a Desktop folder. Starting the local server from another folder with `--directory` gets around this.
 - GitHub doesn't accept your account password for pushing code from the terminal. It needs a **personal access token**, which macOS Keychain saves after the first use.
+  - The fine-grained token page's "Add permissions" menu didn't open. A **classic token** with only the `public_repo` scope worked instead.
+  - Copying a token from the in-app browser pane didn't work. Use Safari or Chrome and the copy icon.
+  - Password prompts in the terminal show nothing as you type or paste. That's normal: paste, then press Enter.
+- **Publishing updates:** commit, then `git push`. GitHub Pages rebuilds the live site automatically within a minute or two.
 - Turning a loose idea ("a few points behind") into a specific number early makes the game buildable and testable. The number can still be changed in settings.
 
 ## Open questions (waiting on Faisal)

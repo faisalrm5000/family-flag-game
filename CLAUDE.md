@@ -24,6 +24,13 @@ python3 -m http.server 8765 --directory "/Users/faisal/Desktop/High Intent Labs/
 
 Port 8000 is used by something else on this Mac. Opening `index.html` by double-clicking also works.
 
+## Hosting
+
+- Repo: https://github.com/faisalrm5000/family-flag-game (**public**)
+- Live site: https://faisalrm5000.github.io/family-flag-game/ (GitHub Pages, `main` branch, root folder)
+- To publish changes: commit, then `git push`. Pages redeploys automatically.
+- **Privacy:** the repo is public. The children's first names are fine, but never put their ages or other personal details in any file.
+
 # CLAUDE.md
 
 Guidance for Claude Code when working in this repository.
